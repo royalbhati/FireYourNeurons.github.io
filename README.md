@@ -4,7 +4,10 @@ If you are an Machine Learning or Deep Learning Enthusiast you have been reading
 So what exactly this thing is ?
 If you work with sci-kit learn then they have this One-Hot Encoder module whose documentations says [sklearn.preprocessing.OneHotEncoder encodes categorical integer features using a one-hot aka one-of-K scheme.](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
 
+Ok Cool! Thats nice but now tell me in English
 
+
+### So One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.
 
 
 
