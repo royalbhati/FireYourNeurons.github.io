@@ -1,9 +1,12 @@
 # What is One Hot Encoding and when is it benificial?
 
 If you are an Machine Learning or Deep Learning Enthusiast you have been reading or hearing this term _One Hot Encoding_ a lot.
+
 So what exactly this thing is ?
 
-### One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.
+**Origin**-One-hot originally comes from electronics - one-hot meaning there's only 1 'hot' or 'on' value in this list, while the rest are 'cold'
+
+### In Data Science One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.
 
 ```
 ╔═════════════╦════════════════╦
@@ -27,9 +30,14 @@ Let us say we have a Dataframe with two columnns Gender and Population we conver
 ╚═════════════╩════════════════╩══════════╝
 ```
 Now Male is assigned to 1 ,Female to 2 and so on but does that make any sense?
+
 Algorithm will interpret that Female is higher than Male
+
 Is it a valid interpretation?
+
 Sorry Feminists but **NO** its not
+That does not really make any sense in terms of value and feature because all of them are completely independent features.
+
 Algorithm will continue building its prediction on these interpretation and it won't end good
 so we need to Encode every caegorical value into separate binary variables.
 
@@ -46,7 +54,7 @@ so we need to Encode every caegorical value into separate binary variables.
 ```
 Now every Gender has its own say separately
 
-###When is it benificial?
+### When is it benificial?
 This works good with almost every machine learning algorithms. but there are few algorithms that can handle categorical values natively like Decision Trees and Random Forests so they don't require One-hot encoding but some Clustering and Regression algorithms needs this for better results.
 
 
