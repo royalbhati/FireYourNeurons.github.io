@@ -1,45 +1,54 @@
-## What is One Hot Encoding and when is it benificial?
+# What is One Hot Encoding and when is it benificial?
 
 If you are an Machine Learning or Deep Learning Enthusiast you have been reading or hearing this term _One Hot Encoding_ a lot.
 So what exactly this thing is ?
-If you work with sci-kit learn then they have this One-Hot Encoder module whose documentations says [sklearn.preprocessing.OneHotEncoder encodes categorical integer features using a one-hot aka one-of-K scheme.](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
 
-Ok Cool! Thats nice but now tell me in English
+### One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.
 
+```
+╔═════════════╦════════════════╦
+║ Gender      ║Population      ║
+╠═════════════╬════════════════╣
+║ MALE        ╬       100      ║
+║ FEMALE      ╬       500      ║
+║ Unspecified ╬       50       ║     
+╚═════════════╩════════════════╩
+```
+Let us say we have a Dataframe with two columnns Gender and Population we convert the Gender column into its Categorical Values so Dataframe now becomes
 
-### So One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.
-
-
-
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+╔═════════════╦════════════════╦══════════╗ 
+║ Gender      ║Categoricalvalue║Population║
+╠═════════════╬════════════════╣══════════║ 
+║ MALE        ╬      1         ║ 100      ║
+║ FEMALE      ╬      2         ║ 500      ║
+║ Unspecified ╬      3         ║ 50       ║
+╚═════════════╩════════════════╩══════════╝
+```
+Now Male is assigned to 1 ,Female to 2 and so on but does that make any sense?
+Algorithm will interpret that Female is higher than Male
+Is it a valid interpretation?
+Sorry Feminists but **NO** its not
+Algorithm will continue building its prediction on these interpretation and it won't end good
+so we need to Encode every caegorical value into separate binary variables.
 
-### Jekyll Themes
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/FireYourNeurons/FireYourNeurons.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+╔════╦══════╦══════╦════════╦
+║MALE║FEMALE║ Usp  ║  Pop.  ║
+╠════╬══════╬══════╬════════╬
+║ 1  ╬ 0    ╬ 0    ║ 100    ║
+║ 0  ╬ 1    ╬ 1    ║ 500    ║
+║ 0  ╬ 0    ╬ 1    ║ 50     ║
+╚════╩══════╩══════╩════════╝
 
-### Support or Contact
+```
+Now every Gender has its own say separately
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+###When is it benificial?
+This works good with almost every machine learning algorithms. but there are few algorithms that can handle categorical values natively like Decision Trees and Random Forests so they don't require One-hot encoding but some Clustering and Regression algorithms needs this for better results.
+
+
+
+
