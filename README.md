@@ -5,7 +5,7 @@ So what exactly this thing is ?
 If you work with sci-kit learn then they have this One-Hot Encoder module whose documentations says One-Hot Encoder
 
 
-(_Encode categorical integer features using a one-hot aka one-of-K scheme._)[http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html]
+[_Encode categorical integer features using a one-hot aka one-of-K scheme._](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
 
 
 
