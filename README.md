@@ -1,8 +1,21 @@
-## Welcome to GitHub Pages
+## What is One Hot Encoding and when is it benificial?
 
-You can use the [editor on GitHub](https://github.com/FireYourNeurons/FireYourNeurons.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+If you are an Machine Learning or Deep Learning Enthusiast you have been reading or hearing this term _One Hot Encoding_ a lot.
+So what exactly this thing is ?
+If you work with sci-kit learn then they have this One-Hot Encoder module whose documentations says One-Hot Encoder
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+```
+Encode categorical integer features using a one-hot aka one-of-K scheme.
+
+The input to this transformer should be a matrix of integers, denoting the values taken on by categorical (discrete) features. The output will be a sparse matrix where each column corresponds to one possible value of one feature. It is assumed that input features take on values in the range [0, n_values).
+
+This encoding is needed for feeding categorical data to many scikit-learn estimators, notably linear models and SVMs with the standard kernels.
+
+```
+
+
+
+
 
 ### Markdown
 
