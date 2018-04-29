@@ -5,11 +5,11 @@ So what exactly this thing is ?
 If you work with sci-kit learn then they have this One-Hot Encoder module whose documentations says One-Hot Encoder
 
 
-_Encode categorical integer features using a one-hot aka one-of-K scheme.
+_Encode categorical integer features using a one-hot aka one-of-K scheme._
 
-_The input to this transformer should be a matrix of integers, denoting the values taken on by categorical (discrete) features. The output will be a sparse matrix where each column corresponds to one possible value of one feature. It is assumed that input features take on values in the range [0, n_values).
+_The input to this transformer should be a matrix of integers, denoting the values taken on by categorical (discrete) features. The output will be a sparse matrix where each column corresponds to one possible value of one feature. It is assumed that input features take on values in the range [0, n_values)._
 
-_This encoding is needed for feeding categorical data to many scikit-learn estimators, notably linear models and SVMs with the standard kernels
+_This encoding is needed for feeding categorical data to many scikit-learn estimators, notably linear models and SVMs with the standard kernels_
 
 
 
