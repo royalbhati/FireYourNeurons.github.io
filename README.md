@@ -1,6 +1,6 @@
-# What is One Hot Encoding and when is it benificial?
+# What is One Hot Encoding and when is it beneficial?
 
-If you are an Machine Learning or Deep Learning Enthusiast you have been reading or hearing this term _One Hot Encoding_ a lot.
+If you are a Machine Learning or a Deep Learning Enthusiast you might have been reading or hearing this term _One Hot Encoding_ a lot.
 
 So what exactly this thing is ?
 
@@ -17,7 +17,7 @@ So what exactly this thing is ?
 ║ Unspecified ╬       50       ║     
 ╚═════════════╩════════════════╩
 ```
-Let us say we have a Dataframe with two columnns Gender and Population we convert the Gender column into its Categorical Values so Dataframe now becomes
+Let us say we have a Dataframe with two columns Gender and Population and we convert the Gender column into its Categorical Values so Dataframe now becomes
 
 ```
 
@@ -29,18 +29,19 @@ Let us say we have a Dataframe with two columnns Gender and Population we conver
 ║ Unspecified ╬      3         ║ 50       ║
 ╚═════════════╩════════════════╩══════════╝
 ```
-Now Male is assigned to 1 ,Female to 2 and so on but does that make any sense?
+Now Male is assigned to 1 ,Female to 2 and so on but does that make any sense? I mean are those values appropriate representation of Gender column?
 
-Algorithm will interpret that Female is higher than Male
+**A BIG NO !**
 
-Is it a valid interpretation?
+Algorithm will interpret that Female is higher than Male as 2>1
+Is it a valid interpretation? Sorry Feminists but **NO** its not!
 
-Sorry Feminists but **NO** its not
-That does not really make any sense in terms of value and feature because all of them are completely independent features.
+_jokes apart_
+That does not really make any sense in terms of value because all of them are completely independent features.Algorithm will continue building its prediction based on these interpretation and it won't predict accurate results
 
-Algorithm will continue building its prediction on these interpretation and it won't end good
-so we need to Encode every caegorical value into separate binary variables.
+**So what should we do?**
 
+We need to Encode every categorical value into separate binary variables.
 ```
 
 ╔════╦══════╦══════╦════════╦
@@ -53,6 +54,8 @@ so we need to Encode every caegorical value into separate binary variables.
 
 ```
 Now every Gender has its own say separately
+
+_That's what exactly we need in our society don't we?_
 
 ### When is it benificial?
 This works good with almost every machine learning algorithms. but there are few algorithms that can handle categorical values natively like Decision Trees and Random Forests so they don't require One-hot encoding but some Clustering and Regression algorithms needs this for better results.
